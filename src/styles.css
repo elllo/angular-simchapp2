@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h3 {
+  margin: 10px 0px 20px 0px;
+}
+
+p {
+  margin: 20px 0px;
+}
+
+.expanded-toolbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-bar {
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-card {
+  /* TODO overflow: ; */
+  color: white;
+  background-color: #9b26af;
+  margin: 20px;
+}
+
+.expanded-card-header {
+  background-color: #691A99;
+  padding-top: 10px;
+}
+
+mat-card-content {
+  padding: 20px;
+  min-height: 100px;
+}
+
+mat-card {
+  padding: 0px !important;
+}
+
+#central-column {
+  width: 30%;
+  min-width: 350px;
+  margin: auto;
+}

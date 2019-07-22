@@ -1,0 +1,29 @@
+<div id="central-column">
+
+  <mat-toolbar-row class="button-bar">
+    <label>
+      Title of new challenge:
+      <input #challengeName />
+    </label>
+    <button mat-raised-button color="accent" (click)="add(challengeName.value); challengeName.value=''">Add</button>
+  </mat-toolbar-row>
+
+  <mat-card class="expanded-card" *ngFor="let challenge of challenges">
+    <mat-card-header class="expanded-card-header">
+      <mat-card-title><h4>{{ challenge.title }}</h4></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ challenge.description}}</p>
+      <p *ngIf="challenge.solved; else notSolved">
+        You did it and you got XXX credits!
+      </p>
+      <ng-template #notSolved>
+        <p>
+          Do it, and get praise and credits!
+        </p>
+      </ng-template>
+
+      <button mat-raised-button color="primary" title="Archive" (click)="delete(challenge)">Delete</button>
+    </mat-card-content>
+  </mat-card>
+</div>
